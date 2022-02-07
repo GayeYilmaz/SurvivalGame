@@ -37,13 +37,14 @@ public class Game {
 	public void start() {
 		System.out.println("Welcome to Survival Game");
 		System.out.print("Please enter name:");
-	    Player player= new Player();
+	    Player player= new Player("Gaye");
 	    System.out.println("Welcome Gaye!");
-	    System.out.println("To start the game choose a character");
+	    System.out.println("Characters");
 	    player.selectChar();
 	    
 	    Location location = null;
 	    while(true) {
+	    	player.printInfo();
 	    	Scanner scan = new Scanner(System.in);
 	    	System.out.println();
 	    	System.out.println("#############Areas#############");

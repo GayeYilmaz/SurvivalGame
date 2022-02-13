@@ -11,6 +11,7 @@ public class Player {
     private int money; 
     private String name;
     private String charName;
+    private int originalHealth;
 
     
 	public Player() {
@@ -26,10 +27,12 @@ public class Player {
 	}
 	public void printInfo() {
 		System.out.println("Character name : "+this.getCharName()+" , "
-				+ "Damage : "+this.getDamage()+" , "
+				+ "Damage : "+this.getTotalDamage()+" , "
 				+ "Health : "+this.getHealth()+" ,  "
 				+ "Money : "+this.getMoney()+" , "
-				+ "Weapon : "+this.getInventory().getWeapon().getName()); 
+				+ "Weapon : "+this.getInventory().getWeapon().getName()+" , "
+				+ "Armor : "+this.getInventory().getArmor().getName()+" , "
+				+ "Block : "+ this.getInventory().getArmor().getBlock()); 
     	
     	
 		
@@ -51,8 +54,11 @@ public class Player {
 		this.inventory = inventory;
 	}
 
-	public int getDamage() {
+	public int getTotalDamage() {
 		return damage +this.getInventory().getWeapon().getDamage();
+	}
+	public int getDamage() {
+		return damage ;
 	}
 
 	public void setDamage(int damage) {
@@ -64,6 +70,9 @@ public class Player {
 	}
 
 	public void setHealth(int health) {
+		if(health<0) {
+			health = 0;
+		}
 		this.health = health;
 	}
 
@@ -89,7 +98,9 @@ public class Player {
     	for(GameChar gameChar : chars) {
     		System.out.println("ID : "+gameChar.getId()+"\t Character name : "+gameChar.getCharName()+"\t Damage : "+gameChar.getDamage()+" \t Health : "+gameChar.getHealth()+"\t Money : "+gameChar.getMoney());
     	}
-    	System.out.println("Please choose a character.");
+    	System.out.println("------------------------------------------------------------------------------------------");
+    	System.out.print("Please choose a character : ");
+    	
     	
     	
     	Scanner scan = new Scanner(System.in);
@@ -119,9 +130,18 @@ public class Player {
     	this.setDamage(gameChar.getDamage());
     	this.setHealth(gameChar.getHealth());
     	this.setMoney(gameChar.getMoney());
-        this.setCharName(gameChar.getCharName());    	
+        this.setCharName(gameChar.getCharName());    
+        this.setOriginalHealth(gameChar.getHealth());
     	
     }
+
+	public int getOriginalHealth() {
+		return originalHealth;
+	}
+
+	public void setOriginalHealth(int originalHealth) {
+		this.originalHealth = originalHealth;
+	}
   
 
 }

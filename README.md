@@ -67,7 +67,7 @@ You can find the properties and the example class diagram below.
  - Player can get the money, weapon and armor from the defeated monsters randomly.
  - Prize : -
 
- -Player can get items with posibilit as shown below.
+ - Player can get items with posibilit as shown below.
   
    - Chance to get weapon : 15%
      - Rifle : 20%

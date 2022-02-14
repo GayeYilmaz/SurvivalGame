@@ -38,7 +38,7 @@ public class Game {
 		System.out.println("Welcome to Survival Game");
 		System.out.print("Please enter name:");
 	    Player player= new Player(scan.nextLine());
-	    System.out.println("Welcome Gaye!");
+	    System.out.println("Welcome "+player.getName()+"!");
 	    System.out.println("Characters");
 	    System.out.println("------------------------------------------------------------------------------------------");
 	    player.selectChar();
@@ -57,6 +57,7 @@ public class Game {
 	    	System.out.println("3 - Cave ->> Award is <Food>. Zombies live in cave!");
 	    	System.out.println("4 - Forest ->> Award is <Firewood>. Vampires live in forest!");
 	    	System.out.println("5 - River ->> Award is <Water>. Bears live near the river!");
+	    	System.out.println("6 - Mine ->> You can get Weaponi Armor or Money. Snakes live in Mine!");
 	    	System.out.println("0 - Exit ->> Finish the game!");
 	    	System.out.println("------------------------------------------------------------------------------------------");
 	    	System.out.print("Please choose the area that you want to go : ");
@@ -80,6 +81,9 @@ public class Game {
 	    		break;
 	    	case 5:
 	    		location = new River(player);
+	    		break;
+	    	case 6:
+	    		location = new Mine(player);
 	    		break;
 	    	default:
 	    		System.out.println("Please choose valid area!");

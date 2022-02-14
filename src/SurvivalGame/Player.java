@@ -5,14 +5,13 @@ import java.util.Scanner;
 public class Player {
 	
 	private Inventory inventory;
-	
 	private int damage;
 	private int health;
     private int money; 
     private String name;
     private String charName;
     private int originalHealth;
-
+    
     
 	public Player() {
 		super();

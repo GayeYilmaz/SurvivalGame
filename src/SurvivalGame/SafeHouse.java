@@ -1,5 +1,7 @@
 package SurvivalGame;
 
+import java.util.List;
+
 public class SafeHouse extends NormalLoc{
 	
 	public SafeHouse(Player player) {
@@ -7,9 +9,20 @@ public class SafeHouse extends NormalLoc{
 	}
 	@Override
 	public boolean onLocation() {
-		System.out.println("You are in the safe house!");
-		System.out.println("Your healt is increased!");
-		this.getPlayer().setHealth(this.getPlayer().getOriginalHealth());
+		
+		
+		if( this.getPlayer().getInventory().getPrize().contains("Firewood") 
+				&&  this.getPlayer().getInventory().getPrize().contains("Water") && 
+				 this.getPlayer().getInventory().getPrize().contains("Food")) {
+			System.out.println("WINNER!");
+			return false;
+		}
+		else {
+			System.out.println("You are in the safe house!");
+			System.out.println("Your healt is increased!");
+			this.getPlayer().setHealth(this.getPlayer().getOriginalHealth());
+		}
+		
 		return true;
 	}
 

@@ -67,25 +67,25 @@ You can find the properties and the example class diagram below.
  - Player can get the money, weapon and armor from the defeated monsters randomly.
  - Prize : -
 
- - Player can get items with posibilit as shown below.
- - 
- - Chance to get weapon : 15%
-   - Rifle : 20%
-   - Sword : 30%
-   - Gun : 50%
-   - 
- - Chance to get armor : 15%
-   - Heavy Armor : 20%
-   - Medium Armor : 30%
-   - Light Armor : 50%
-   - 
- - Chance to get money : 25%
-   - 10 Money : 20%
-   - 5 Money : 30%
-   - 1 Money : 50%
-   - 
- - Chance to get nothing : 45%
- 
+ -Player can get items with posibilit as shown below.
+  
+   - Chance to get weapon : 15%
+     - Rifle : 20%
+     - Sword : 30%
+     - Gun : 50%
+
+   - Chance to get armor : 15%
+     - Heavy Armor : 20%
+     - Medium Armor : 30%
+     - Light Armor : 50%
+
+   - Chance to get money : 25%
+     - 10 Money : 20%
+     - 5 Money : 30%
+     - 1 Money : 50%
+
+   - Chance to get nothing : 45%
+
  
  
  ## Class Diagram
